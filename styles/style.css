@@ -53,45 +53,45 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 }
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
-  gap: 40px;
+  gap: 37px;
   width: 100%;
   align-items: flex-start;
-  justify-content: space-between;
+  margin-left: 10px;
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: left;
   font-size: 18px;
 }
 .content__list {
-  height: 300px;
+  height: 298px;
   overflow-y: auto;
   position: relative;
 }
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
   grid-column: 2;
   width: 100%;
   height: 100%;
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 38px;
+  margin-bottom: 33px;
 }
 
 .content__video-card {
@@ -102,22 +102,29 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  margin: auto;
+}
+.content__video-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
   flex-grow: 1;
 }
+
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 75px;
-  line-height: 94%; 
+  line-height: 94%;
   text-align: left;
   text-transform: uppercase;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .content__accent {
   color: #545050;
@@ -137,10 +144,11 @@ ol {
 .content__card-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 0.001;
-  text-underline-offset: 6px;
+  text-underline-offset: 4px;
 }
 .content__card-link:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .content__card-link:focus {
@@ -151,14 +159,18 @@ ol {
   outline: 1px solid #fff;
 }
 .content__video-card-title {
-  font-family: Oswald;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
   text-transform: uppercase;
+  margin-bottom: -5px;
 }
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
 }
 .content__list li:last-child {
@@ -180,6 +192,7 @@ fieldset {
   display: flex;
   width: fit-content;
   cursor: pointer;
+  align-items: center;
 }
 .search-form__checkbox-list {
   display: flex;
@@ -190,30 +203,34 @@ fieldset {
   appearance: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  border-left: none;
-  border-right: none;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   background-color: transparent;
   font-size: 18px;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   opacity: 0.7;
   color: #fff;
   font-weight: 400;
   min-width: 225px;
   word-spacing: -5px;
   padding-left: 1px;
+  outline: none;
 }
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 .search-form__textfield:focus-visible {
   outline: none;
 }
+
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
+
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
@@ -243,10 +260,10 @@ fieldset {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   cursor: pointer;
-  height: 34px;
+  min-height: 34px;
   font-style: normal;
   font-weight: bold;
 }
@@ -271,8 +288,10 @@ button:hover {
 
 button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 button:focus-visible {
-  outline: 2px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
